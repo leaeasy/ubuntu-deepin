@@ -1,0 +1,2 @@
+deb http://mirrors.163.com/ubuntu bionic main multiverse universe restricted
+deb [trusted=yes] http://ppa.launchpad.net/leaeasy/dde/ubuntu bionic main

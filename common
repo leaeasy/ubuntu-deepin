@@ -1,0 +1,33 @@
+# Set If USE_TMPFS to build chroot
+# if set to 1, will mount tmpfs to set chroot
+# the TMPFS_SIZE is the tmpfs size
+#GNUPGHOME=/root/gnupg
+USE_TMPFS=1
+TMPFS_SIZE=8g
+
+# Set the apt method,apt-get or aptitude
+LB_APT=apt-get
+# Set the apt options
+LB_APT_OPTIONS=--allow-unauthenticated --force-yes -y
+# Set the live method, live-boot/casper/none
+LB_INITRAMFS=casper
+LB_UPSTREAMER=ubuntu
+# Set the distribution
+LB_DISTRIBUTION=bionic
+# set debconf_frontend
+LB_DEBCONF_FRONTEND=noninteractive
+
+# set uefi security boot support
+LB_GRUB2_BOOTLOADERS=grub2-sign
+LB_SECURITY_BOOT=1
+
+# set up gpg keyid
+#LB_GPG_KEY_ID=debian-mirror@linuxdeepin.com
+
+# Set the deboostrap args
+LB_DEBOOTSTRAP_MIRROR=http://mirrors.163.com/ubuntu
+LB_DEBOOTSTRAP_AREA=main 
+LB_DEBOOTSTRAP_OPTIONS=--no-check-gpg
+
+# Set the live-image-name of prefix
+LIVE_IMAGE_NAME=ubuntu-deepin

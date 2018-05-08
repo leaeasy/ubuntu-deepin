@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+systemctl enable systemd-timesyncd.service || true
+
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/solar/solar.plymouth 90 || true
+
+rm -f /usr/share/applications/vim.desktop
+rm -f /etc/apt/sources.list.d/*
+
+update-initramfs -u
